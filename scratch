@@ -1,0 +1,19 @@
+
+python run.py --mode train \
+--env_config data/envs/dm_cheetah.yaml \
+--agent_config a1/dm_cheetah_bc_agent.yaml \
+--log_file output/log.txt \
+--out_model_file output/model.pt \
+--max_samples 20000 \
+--visualize
+
+
+
+
+
+python run.py --mode test \
+--env_config data/envs/dm_cheetah.yaml \
+--agent_config a1/dm_cheetah_bc_agent.yaml \
+--model_file output/model.pt \
+--test_episodes 20 \
+--visualize
